@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan</title>
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bg-music" loop>
+  <source src="music/wedding.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- ================= OPENING ================= -->
+<section class="opening" id="opening">
+
+  <!-- FOTO PASANGAN + BINGKAI -->
+  <div class="frame-box fade-up">
+    <img src="img/couple.jpg" alt="Pasangan">
+  </div>
+
+  <p class="wedding-text fade-up">THE WEDDING OF</p>
+  <h1 class="names fade-up">Intan & Ageng</h1>
+
+
+  <p class="kepada fade-up">
+    Kepada Yth.<br>
+    Bapak/Ibu/Saudara/i
+  </p>
+
+  <button class="open-btn fade-up" onclick="openInvitation()">▶ Buka Undangan</button>
+</section>
+
+<!-- ================= HALAMAN UTAMA ================= -->
+<section class="main" id="main">
+  <div class="photo-frame fade-up">
+    <img src="img/couple.jpg" alt="Pasangan">
+  </div>
+
+  <h2 class="main-names fade-up">Intan & Ageng</h2>
+  <p class="date fade-up">Jumat, 12 Juni 2026</p>
+
+  <div class="countdown fade-up">
+    <div><span id="days">57</span><small>Hari</small></div>
+    <div><span id="hours">00</span><small>Jam</small></div>
+    <div><span id="minutes">00</span><small>Menit</small></div>
+    <div><span id="seconds">00</span><small>Detik</small></div>
+  </div>
+</section>
+
+<!-- ================= AYAT ================= -->
+<section class="ayat" id="ayat">
+  <p class="ayat-arab fade-up">
+    وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا
+    لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً
+  </p>
+
+  <p class="ayat-arti fade-up">
+    “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+    untukmu pasangan hidup dari jenismu sendiri…”
+  </p>
+
+  <p class="ayat-sumber fade-up">(QS. Ar-Rum : 21)</p>
+</section>
+
+<!-- ================= MEMPELAI ================= -->
+<section class="mempelai" id="mempelai">
+  <p class="pengantar fade-up">
+    Dengan memohon rahmat dan ridho Allah SWT,<br>
+    kami bermaksud menyelenggarakan pernikahan putra-putri kami:
+  </p>
+
+  <div class="mempelai-box fade-up">
+    <img src="img/bride.png" alt="Mempelai Wanita">
+    <h3>Intan Puspita Sari</h3>
+    <p class="ortu">
+      Putri dari<br>
+      Bapak Heriyanto<br>
+      & Ibu Tusiati
+    </p>
+  </div>
+
+  <div class="separator fade-up">&</div>
+
+  <div class="mempelai-box fade-up">
+    <img src="img/groom.png" alt="Mempelai Pria">
+    <h3>Ageng Pradana</h3>
+    <p class="ortu">
+      Putra dari<br>
+      Bapak Rahman Toni<br>
+      & Ibu Wida Astuti
+    </p>
+  </div>
+</section>
+
+<!-- ================= ACARA ================= -->
+<section class="acara" id="acara">
+  <h2 class="acara-title fade-up">Akad & Resepsi</h2>
+
+  <div class="card fade-up">
+    <h3>Akad Nikah</h3>
+    <p>
+      Jumat, 12 Juni 2026<br>
+      Pukul 08.00 WIB<br>
+      Kediaman Bapak Heriyanto<br>
+      Sidokerto
+    </p>
+  </div>
+
+</section>
+
+<!-- ================= MAPS ================= -->
+<section class="maps" id="maps">
+  <h2 class="maps-title fade-up">Lokasi Acara</h2>
+
+  <p class="maps-text fade-up">
+    Kami berharap kehadiran Anda dapat membawa kebahagiaan bagi kami.
+  </p>
+
+  <div class="maps-frame fade-up">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3973.803481004943!2d105.20921387498207!3d-5.135322694841826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNcKwMDgnMDcuMiJTIDEwNcKwMTInNDIuNCJF!5e0!3m2!1sen!2sid!4v1776428857600!5m2!1sen!2sid"
+    width="100%"
+    height="300"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+  <a href="https://maps.app.goo.gl/jVSuGE94FcuSCwTq6"
+   target="_blank"
+   class="maps-btn fade-up">
+  Buka di Google Maps
+</a>
+
+</section>
+
+<!-- ================= GIFT ================= -->
+<section class="gift" id="gift">
+  <h2 class="gift-title fade-up">Wedding Gift</h2>
+
+  <p class="gift-text fade-up">
+    Doa restu Anda merupakan karunia yang sangat berarti bagi kami.
+  </p>
+
+  <div class="gift-card fade-up">
+    <img src="img/bank.png">
+    <p>Dana<br><strong>083134192922</strong><br>a.n Intan Puspita S.</p>
+    <button onclick="copyRekening('083134192922')">Salin</button>
+  </div>
+</section>
+
+<!-- ================= UCAPAN ================= -->
+<section class="ucapan" id="ucapan">
+  <h2 class="ucapan-title fade-up">Ucapan & Doa</h2>
+
+  <form class="ucapan-form fade-up" onsubmit="kirimUcapan(event)">
+    <input type="text" id="nama" placeholder="Nama Anda" required>
+    <textarea id="pesan" placeholder="Ucapan & Doa" required></textarea>
+    <select id="kehadiran">
+      <option value="">Konfirmasi Kehadiran</option>
+      <option>Hadir</option>
+      <option>Tidak Hadir</option>
+    </select>
+    <button type="submit">Kirim</button>
+  </form>
+
+  <div class="list-ucapan" id="listUcapan"></div>
+</section>
+
+<!-- ================= PENUTUP ================= -->
+<section class="penutup" id="penutup">
+  <p class="penutup-text fade-up">
+    Merupakan suatu kehormatan dan kebahagiaan bagi kami atas doa restu Anda.
+  </p>
+
+  <p class="salam fade-up">Wassalamu’alaikum Wr. Wb.</p>
+
+  <h2 class="penutup-nama fade-up">Intan & Ageng</h2>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
