@@ -90,3 +90,13 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".fade-up").forEach(el => {
   observer.observe(el);
 });
+
+// ================= TAMU =================
+document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const nama = urlParams.get('to');
+
+  if (nama) {
+    document.getElementById("namaTamu").innerText = decodeURIComponent(nama);
+  }
+});
