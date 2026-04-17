@@ -1,3 +1,9 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
 function openInvitation() {
   // Sembunyikan opening
   document.getElementById("opening").style.display = "none";
@@ -99,12 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("namaTamu").innerText = decodeURIComponent(nama);
   }
 });
-
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
 
 async function loadUcapan() {
   const querySnapshot = await getDocs(collection(db, "ucapan"));
