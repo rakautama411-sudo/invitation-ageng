@@ -23,7 +23,7 @@ function openInvitation() {
 }
 
 // TANGGAL ACARA
-const weddingDate = new Date("April 20, 2026 10:00:00").getTime();
+const weddingDate = new Date("Juni 12, 2026 10:00:00").getTime();
 
 setInterval(() => {
   const now = new Date().getTime();
