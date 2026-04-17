@@ -105,3 +105,23 @@ import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.c
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+
+async function loadUcapan() {
+  const querySnapshot = await getDocs(collection(db, "ucapan"));
+  const list = document.getElementById("listUcapan");
+
+  list.innerHTML = "";
+
+  querySnapshot.forEach((doc) => {
+    const data = doc.data();
+
+    list.innerHTML += `
+      <div class="card">
+        <strong>${data.nama}</strong> (${data.kehadiran})<br>
+        ${data.pesan}
+      </div>
+    `;
+  });
+}
+
+loadUcapan();
