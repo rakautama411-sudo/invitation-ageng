@@ -53,25 +53,24 @@ function copyRekening(no) {
   alert("Nomor rekening berhasil disalin");
 }
 
-function kirimUcapan(e) {
-  e.preventDefault();
+async function kirimUcapan(event) {
+  event.preventDefault();
 
   const nama = document.getElementById("nama").value;
   const pesan = document.getElementById("pesan").value;
-  const hadir = document.getElementById("kehadiran").value;
+  const kehadiran = document.getElementById("kehadiran").value;
 
-  const list = document.getElementById("listUcapan");
+  await addDoc(collection(db, "ucapan"), {
+    nama,
+    pesan,
+    kehadiran,
+    waktu: new Date()
+  });
 
-  const div = document.createElement("div");
-  div.className = "ucapan-item";
-  div.innerHTML = `
-    <strong>${nama} (${hadir})</strong>
-    <p>${pesan}</p>
-  `;
+  alert("Ucapan tersimpan!");
 
-  list.prepend(div);
-
-  e.target.reset();
+  document.getElementById("nama").value = "";
+  document.getElementById("pesan").value = "";
 }
 
 const observer = new IntersectionObserver(
@@ -100,3 +99,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("namaTamu").innerText = decodeURIComponent(nama);
   }
 });
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
